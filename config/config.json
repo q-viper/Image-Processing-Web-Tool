@@ -1,0 +1,17 @@
+{
+    "version": "0.0.1",
+    "logging": {
+        "level": "DEBUG",
+        "console_log": true
+    },
+    "allowed_modes":{
+        "Image Size Reducer":{
+            "extensions":"png,jpeg,jpg"
+        }
+    },
+    "execution_mode":
+    {
+        "mode":"dev"
+    }
+
+}
