@@ -18,13 +18,13 @@ if size_reducer:
     exts = var.allowed_modes_dict["Image Size Reducer"]["extensions"].split(",")
     uploaded_file = st.file_uploader(f"Select file: {exts}", type=exts)
     if uploaded_file is not None:
-        fname = f"data/{time.time()}_"+uploaded_file.name
+        fname = f"data/{int(time.time())}."+uploaded_file.name.split(".")[-1]
 
         img = Image.open(uploaded_file).convert("RGB")        
         with open(fname, "wb") as f:
             f.write(uploaded_file.getbuffer())
             for f in os.listdir("data"):
-                ts = float(f.split("_")[1]) if "temp" in f else float(f.split("_")[0])
+                ts = float(f.split(".")[0])
                 try:
                     if time.time()-ts > 120:
                         os.remove("data/"+f)
