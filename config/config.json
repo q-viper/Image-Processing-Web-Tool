@@ -7,6 +7,11 @@
     "allowed_modes":{
         "Image Size Reducer":{
             "extensions":"png,jpeg,jpg"
+        },
+        "Image Merger":{
+            "max_allowed":-1,
+            "extensions":"png,jpeg,jpg"
+
         }
     },
     "execution_mode":
